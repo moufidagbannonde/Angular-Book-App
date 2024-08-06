@@ -1,4 +1,3 @@
-import { outputAst } from '@angular/compiler';
 import { Output, EventEmitter,Component } from '@angular/core';
 
 @Component({
@@ -16,7 +15,7 @@ export class BookHeaderComponent {
    display():void {
     // affiche le formulaire et au clic du bouton "formulaire d'ajout"
     this.affiche = !this.affiche;
-    // emission 
-    this.passValue.emit(this.affiche)
+    // passer la valeur de affiche à la variable passValue 
+    this.passValue.emit(this.affiche);
   }
 }
