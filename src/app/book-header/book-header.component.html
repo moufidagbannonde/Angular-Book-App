@@ -2,7 +2,7 @@
     <a href="#">
         <!-- [src]="logo" est appelée du property binding 
         liaison de propriété-->
-        <img [src]="logo" [alt]="alt" class="logo">
+        <img [src]="logo" alt="capeverdeflag" class="logo">
     </a>
 </div>
 
@@ -13,10 +13,23 @@
         <li><a href="#">A propos</a></li>
     </ul>
 </nav>
-<div class="container">
-    <form action="" method="POST">
-        <input type="text" name="task" placeholder="Ajouter le titre"/>
-        <input type="text" name="author" placeholder="Ajouter l'auteur"/><br>
-        <button> Add Book</button>
-    </form>
+<div>
+    <!-- mettre un évènement sur le bouton pour afficher le formulaire -->
+    <!-- au clic , le bouton exécutera la méthode display() de la classe BookHeaderComponent -->
+    <!-- le bouton retour s'affichera quand la variable affiche sera à true, c'est-à-dire que quand le formulaire n'est pas encore affiché -->
+    
+  <!-- <button class="btn" (click)="display()" *ngIf="!affiche">
+        Formulaire d'ajout
+    </button> -->
+     <!-- ngIf pour une structure conditionnelle -->
+    <!-- le bouton retour s'affichera quand la variable affiche sera à true, c'est-à-dire que quand le formulaire s'affiche  -->
+    <!-- <button class="btn" (click)="display()" *ngIf="affiche">
+        Retour
+    </button> -->
+<!--  autre manière plus simple de faire un toggle sur le bouton  -->
+    <button class="btn" (click)="display()">{{!affiche ? "Formulaire d'ajout" : "Retour"}}</button>
+</div>
+<!-- condition mise sur la div pour ne pas afficher le formulaire à l'affichage de la page  -->
+<div>
+   
 </div>

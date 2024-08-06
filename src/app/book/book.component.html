@@ -1,12 +1,18 @@
 <div class="contain">
     <!-- Le header qui affichera le composant app-book-header -->
     <header>
-        <app-book-header>
+        <!-- en tête de la page -->
+        <app-book-header (passValue)="recupValue($event)">
 
         </app-book-header>
+        <!-- formulaire d'ajout de livres-->
+        <app-book-form>
+        
+        </app-book-form>
     </header>
     <!-- Le main qui affichera le composant app-book-list -->
     <main>
+        <!-- tableau d'affichage des livres -->
         <app-book-list>
 
         </app-book-list>
@@ -14,6 +20,7 @@
     </main>
     <!-- Le footer qui affichera le composant app-book-footer -->
     <footer>
+        <!-- pied de page de l'application -->
         <app-book-footer>
 
         </app-book-footer>
