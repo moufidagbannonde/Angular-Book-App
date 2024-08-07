@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { NavigationSkipped } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { BookInterface } from '../book-interface';
+import { ServiceBooksService } from '../service-books.service';
 
 @Component({
   selector: 'app-book-list',
@@ -37,12 +38,14 @@ import { NavigationSkipped } from '@angular/router';
 //   `
 // })
 
-export class BookListComponent {
+export class BookListComponent implements OnInit{
+  books ?: BookInterface[];
     name:string = "Moufid";
-    books = [
-      {id:1, title: "Le royaume du Maroc ",author:"Mohamed Guendouzi", statut:"En attente"},
-      {id:2, title: "Las Palancas Negras",author:"Thiago Maria Neves", statut: "En cours"},
-      {id:3, title: "Quasimodo",author:"Victor Hugo", statut: "Terminé"},
-      {id:4, title: "Tubaroes Azuis",author:"Rayleigh Fernandinho", statut: "En attente"},
-    ]
+    constructor(private BooksService: ServiceBooksService){
+    }
+    ngOnInit(){
+        this.books = this.BooksService.getBooks();
+    }
+
+  
 }

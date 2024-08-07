@@ -7,6 +7,9 @@ import { Output, EventEmitter,Component } from '@angular/core';
 })
 export class BookHeaderComponent {
    logo: string = "../assets/capeverdeflag.jpg";
+   href1: string =  "https://symfony.com/";
+   href2:string = "https://vee-validate.logaretm.com/v4/";
+   href3:string = "https://www.python.org/";
    // passage d'une valeur de l'enfant vers le parent
    // instance de la classe EventEmitter
    @Output() passValue = new EventEmitter<boolean>();

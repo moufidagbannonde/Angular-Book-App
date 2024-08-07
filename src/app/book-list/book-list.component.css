@@ -3,6 +3,7 @@ table {
     border-collapse: collapse;
     margin: 0 auto;
     max-width: 500px;
+    margin-bottom: 20px;
 }
 h1 {
     text-align: center;

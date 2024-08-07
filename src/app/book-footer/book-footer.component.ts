@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './book-footer.component.css'
 })
 export class BookFooterComponent {
-
+  href1: string =  "https://symfony.com/";
+  href2:string = "https://reactnative.dev/";
+  href3:string = "https://www.python.org/";
 }

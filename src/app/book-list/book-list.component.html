@@ -3,6 +3,7 @@
 <table>
     <thead>
         <tr>
+            <th>N°</th>
             <th>Titre</th>
             <th>Auteur</th>
             <th>Statut</th>
@@ -10,12 +11,13 @@
     </thead>
     <tbody>
         <!-- parcours du tableau books -->
-        @for(book of books; track  book.id){
-            <tr>
+       <!-- directive *ngFor pour parcourir le tableau contenant les livres à afficher -->
+            <tr *ngFor="let book of books; let i = index">
+                <td>{{i + 1}}</td>
                 <td>{{book.title}}</td>
                 <td>{{book.author}}</td>
                 <td>{{book.statut}}</td>
             </tr>
-        }
+        
     </tbody>
 </table>
