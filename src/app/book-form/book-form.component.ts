@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormGroup } from '@angular/forms'
+import { FormGroup , FormControl, ReactiveFormsModule} from '@angular/forms';
 import { ServiceBooksService } from '../service-books.service';
 
 @Component({
@@ -12,8 +12,9 @@ export class BookFormComponent {
   @Input({ required: true }) affiche!: boolean;
 
   inputForm = new FormGroup({
-      // title: new FormControl(''),
-      // author: new FormControl(''),
+      title: new FormControl(''),
+      author: new FormControl(''),
+      statut: new FormControl('')
 
   })
   validationFormulaire(){

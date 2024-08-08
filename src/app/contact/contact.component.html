@@ -9,4 +9,32 @@
         <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
 </div> -->
+<!-- FormControl est une classe qui réprésentera un champ de notre formularie et permet de gérer la manière réactive du formulaire -->
 <h1>Les Formulaires réactifs</h1>
+
+
+<!-- en utilisant le ngSubmit , on doit importer le module FormsModule -->
+<form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+    <div class="mb-3">
+        <label for="" class="form-label"> Name</label>
+        <input type="email" class="form-control" id="" formControlName="name" placeholder="Moufid" required>
+      </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="" formControlName="email" placeholder="moufid@gmail.fr" required>
+      </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Tel</label>
+        <input type="tel" class="form-control" id="" formControlName="number" placeholder=" 000 000 0000" required>
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Message</label>
+        <textarea class="form-control" id="" rows="5"  formControlName="msg" placeholder="Entrez un message !" required ></textarea>
+      </div>
+      <button class="btn btn-primary">
+        Submit
+      </button>
+</form>
+
+
+

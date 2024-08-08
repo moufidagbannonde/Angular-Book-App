@@ -9,7 +9,7 @@ import { BookHeaderComponent } from './book-header/book-header.component';
 import { BookFooterComponent } from './book-footer/book-footer.component';
 import { BookFormComponent } from './book-form/book-form.component';
 import { ContactComponent } from './contact/contact.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    // FormsModule,
     ReactiveFormsModule
   ],
   providers: [],
