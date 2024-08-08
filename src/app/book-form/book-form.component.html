@@ -1,8 +1,12 @@
 <div class="container" *ngIf="affiche">
-    <form action="">
-        <input type="text" name="task" placeholder="Ajouter le titre" />
-        <input type="text" name="author" placeholder="Ajouter l'auteur" />
-        <input type="text" name="statut" placeholder="En attente" disabled />
+    <form [formGroup]="inputForm" (ngSubmit)="validationFormulaire()">
+        <!-- ngSubmit qui veut signifier le moment de soumssion du formulaire 
+            () équivalent de v-on en vue js ou de @
+        -->
+        <input type="text" formControlName="title" placeholder="Ajouter le titre" />
+        <input type="text" formControlName="author" placeholder="Ajouter l'auteur" />
+        <input type="text" formControlName="statut" 
+        hidden placeholder="En attente" />
         <br>
     </form>
     <button> Ajouter un livre</button>

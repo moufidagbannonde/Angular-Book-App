@@ -31,4 +31,8 @@ span {
    gap: 35px;
    justify-content: center;
 }
-
+.footerdiv {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1px;
+}

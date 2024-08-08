@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms'
+import { ServiceBooksService } from '../service-books.service';
 
 @Component({
   selector: 'app-book-form',
@@ -7,7 +9,16 @@ import { Component, Input } from '@angular/core';
 })
 export class BookFormComponent {
   // valeur affiche qui viendra du parent BookComponent
-@Input({required: true}) affiche!: boolean;
+  @Input({ required: true }) affiche!: boolean;
 
+  inputForm = new FormGroup({
+      // title: new FormControl(''),
+      // author: new FormControl(''),
+
+  })
+  validationFormulaire(){
+    console.log("Button clicked !")
+  }
+  constructor(private BooksServices: ServiceBooksService) { }
 
 }
